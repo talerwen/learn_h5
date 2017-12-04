@@ -15,10 +15,113 @@
         在画布上&lt;Canvas&gt;画一个
     </p>
     <h2>2.创建一个画布&lt;Canvas&gt;</h2>
+    <canvas id="myJsCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas>
     <xmp>
-    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas>
+        <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas>
     </xmp>
-    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas>
     <h2>3.使用JavaScript来绘制图像</h2>
+    <xmp>
+        <script>
+            // 找到canvas元素
+            var c = document.getElementById("myJsCanvas");
+            // 创建 context 对象：
+            var ctx = c.getContext("2d");
+            // fillStyle 默认设置是#000000（黑色）
+            ctx.fillStyle = "#FF0000";
+            // fillRect(x,y,width,height) 方法
+            ctx.fillRect(0,0,150,75);
+        </script>
+    </xmp>
+    <h2>4.Canvas-矩形</h2>
+    <canvas id="myCanvasLine" width="200" height="200" style="border:1px solid #000000;"></canvas>
+    <xmp>
+        <script>
+            // 找到canvas元素
+            var c = document.getElementById("myCanvasLine");
+            // 创建 context 对象
+            var ctx = c.getContext("2d");
+            // 定义线条开始坐标
+            ctx.moveTo(0,0);
+            // 定义线条结束坐标
+            ctx.lineTo(200,200);
+            // 开始画
+            ctx.stroke();
+        </script>
+    </xmp>
+    <h2>5.Canvas-圆形</h2>
+    <canvas id="myCanvasArc" width="200" height="200" style="border:1px solid #000000;"></canvas>
+    <xmp>
+        <script>
+            // 找到canvas元素
+            var c = document.getElementById("myCanvasArc");
+            // 创建 context 对象
+            var ctx = c.getContext("2d");
+            // 重置当前的路径
+            ctx.beginPath();
+            // 绘制弧线(x, y, radius, startRad, endRad, anticlockwise=false)
+            ctx.arc(95,50,40,0,2*Math.PI);
+            ctx.stroke();
+        </script>
+    </xmp>
+    <h2>6.Canvas-文本</h2>
+    <canvas id="myCanvasText" width="200" height="200" style="border:1px solid #000000;"></canvas>
+    <xmp>
+        <script>
+            // 找到canvas元素
+            var c = document.getElementById("myCanvasText");
+            // 创建 context 对象
+            var ctx = c.getContext("2d");
+            // 设置字体
+            ctx.font = "30px Arial";
+            // 填充实体文本
+            ctx.fillText("Hello World",10,50);
+            // 设置字体
+            ctx.font="30px Arial";
+            // 填充空心字体
+            ctx.strokeText("Hello World",10,100);
+        </script>
+    </xmp>
+    <h2>7.Canvas-渐变</h2>
+    <canvas id="myCanvasGradualChange" width="200" height="200" style="border:1px solid #000000;"></canvas>
+
+    <!-- 使用JavaScript来绘制图像 START -->
+    <script>
+        var c = document.getElementById("myJsCanvas");
+        var ctx = c.getContext("2d");
+        ctx.fillStyle = "#FF0000";
+        ctx.fillRect(0,0,150,75);
+    </script>
+    <!-- 使用JavaScript来绘制图像 END -->
+    <!-- Canvas-矩形 START -->
+    <script>
+        var c = document.getElementById("myCanvasLine");
+        var ctx = c.getContext("2d");
+        ctx.moveTo(0,0);
+        ctx.lineTo(200,200);
+        ctx.stroke();
+    </script>
+    <!-- Canvas-矩形 END -->
+
+    <!-- Canvas-圆形 START -->
+    <script>
+        var c = document.getElementById("myCanvasArc");
+        var ctx = c.getContext("2d");
+        ctx.beginPath();
+        ctx.arc(95,50,40,0,2*Math.PI);
+        ctx.stroke();
+    </script>
+    <!-- Canvas-圆形 END -->
+
+    <!-- Canvas-文本 START -->
+    <script>
+        var c = document.getElementById("myCanvasText");
+        var ctx = c.getContext("2d");
+        ctx.font = "30px Arial";
+        ctx.fillText("Hello World",10,50);
+        ctx.font="30px Arial";
+        ctx.strokeText("Hello World",10,100);
+    </script>
+    <!-- Canvas-文本 END -->
+
 </body>
 </html>
