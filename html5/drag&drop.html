@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>html5 拖放(Drag和Drop)</title>
+</head>
+<body>
+<h1>HTML5 拖放(Drag和Drop)</h1>
+<h2>1.什么是拖放</h2>
+<ul>
+    <ol>拖放是一种常见的特性，即抓取对象以后拖到另一个位置</ol>
+    <ol>在HTML5中，拖放是标准的一部分，任何元素都能够拖放</ol>
+</ul>
+<p>拖动 h5 图片到矩形框中</p>
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<br>
+<img id="drag1" src="/images/logo.png" draggable="true" ondragstart="drag(event)" width="336" height="69" alt="">
+</body>
+</html>
