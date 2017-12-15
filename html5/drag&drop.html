@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>html5 拖放(Drag和Drop)</title>
+    <!--[if lt IE 9]>
+    <script src="http://cdn.static.runoob.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+        #div1 {width:350px;height:70px;padding:10px;border:1px solid #aaaaaa;}
+    </style>
 </head>
 <body>
 <h1>HTML5 拖放(Drag和Drop)</h1>
@@ -14,6 +20,42 @@
 <p>拖动 h5 图片到矩形框中</p>
 <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 <br>
-<img id="drag1" src="/images/logo.png" draggable="true" ondragstart="drag(event)" width="336" height="69" alt="">
+<img id="drag1" src="/img/drag&drop.jpg" draggable="true" ondragstart="drag(event)" width="336" height="69" alt="">
+<h2>2.设置元素为可拖放</h2>
+<p>
+    为了使元素可拖动,把draggable属性设置为true
+    <xmp>
+        <img draggable="true">
+    </xmp>
+</p>
+<h2>3.拖动什么 - ondragstart 和 setData()</h2>
+<p>
+    添加元素被拖动时的事件,ondragstart属性调用一个函数,drag(event),规定了被拖动的数据
+    dataTransfer.setData()方法设置被拖数据的数据类型和值
+    <xmp>
+        function drag(ev)
+        {
+            ev.dataTransfer.setData("Text",ev.target.id);
+        }
+    </xmp>
+</p>
+<script>
+    function allowDrop(ev)
+    {
+        ev.preventDefault();
+    }
+
+    function drag(ev)
+    {
+        ev.dataTransfer.setData("Text",ev.target.id);
+    }
+
+    function drop(ev)
+    {
+        ev.preventDefault();
+        var data=ev.dataTransfer.getData("Text");
+        ev.target.appendChild(document.getElementById(data));
+    }
+</script>
 </body>
 </html>
