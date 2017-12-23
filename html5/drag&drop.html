@@ -39,6 +39,35 @@
         }
     </xmp>
 </p>
+<h2>4.放到何处 - ondragover</h2>
+<p>
+    ondragover事件规定在何处放置被拖动的数据。
+    默认地，无法将数据/元素放置到其他元素中。如果需要设置允许放置，我们必须阻止对元素的默认处理方式。
+    这要通过调用ondragover事件的event.preventDefault()方法：
+    <xmp>
+        event.preventDefault()
+    </xmp>
+</p>
+<h2>5.进行放置 - ondrop</h2>
+<p>
+    当放置被拖数据时，会发生drop事件。
+    在上面的例子中，ondrop属性调用了一个函数，drop(event):
+    <xmp>
+        function drop(ev)
+        {
+            ev.preventDefault();
+            var data=ev.dataTransfer.getData("Text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </xmp>
+</p>
+<h2>6.代码过程解释</h2>
+<ul>
+    <ol>调用preventDefault()来避免浏览器对数据的默认处理（drop事件的默认行为是以链接形式打开）</ol>
+    <ol>通过dataTransfer.getData("Text")方法获得被拖的数据。该方法将返回在setData()方法中设置为相同类型的任何数据。</ol>
+    <ol>被拖数据是被拖元素的id("drag1")</ol>
+    <ol>把被拖元素追加到放置元素（目标元素）中</ol>
+</ul>
 <script>
     function allowDrop(ev)
     {

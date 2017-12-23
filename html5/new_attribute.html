@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5 新的表单属性</title>
+</head>
+<body>
+<h1>HTML5 新的表单属性</h1>
+autocomplete属性规定form或input域应该拥有自动完成功能。
+当用户在自动完成域中开始输入时，浏览器应该在该域中显示填写的选项。
+提示：autocomplete属性有可能在form元素中是开启的，而在input元素中是关闭的。
+<form action="../php/demo-form.php" autocomplete="on">
+    First name:<input type="text" name="fname"><br>
+    Last name: <input type="text" name="lname"><br>
+    E-mail: <input type="email" name="email" autocomplete="on"><br>
+    <input type="submit">
+</form>
+</body>
+</html>

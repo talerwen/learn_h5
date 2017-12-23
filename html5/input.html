@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML 新的 Input 类型</title>
+</head>
+<body>
+
+<form action="../php/demo-form.php" name="input-color">
+    <h2>Input 类型：color</h2>
+    <p>从拾色器中选择一个颜色</p>
+    选择你喜欢的颜色：<input type="color" name="favcolor">
+    <input type="submit">
+</form>
+
+<form action="../php/demo-form.php" name="input-date">
+    <h2>Input 类型：date</h2>
+    <p>定义一个时间控制器</p>
+    生日：<input type="date" name="bday">
+    <input type="submit">
+</form>
+
+<form action="../php/demo-form.php" name="input-datetime">
+    <h2>Input 类型：datetime</h2>
+    <p>定义一个日期和时间控制器</p>
+    生日（日期和时间）：<input type="datetime" name="bdaytime">
+    <input type="submit">
+</form>
+
+<form action="../php/demo-form.php" name="input-email">
+    <h2>Input 类型：email</h2>
+    <p>email类型用于应该包含e-mail地址的输入域</p>
+    在提交表单时，会自动验证email域的值是否合法有效：
+    E-mail：<input type="email" name="email">
+    <input type="submit">
+</form>
+
+<form action="../php/demo-form.php" name="input-month">
+    <h2>Input 类型：month</h2>
+    <p>month类型允许你选择一个月份</p>
+    生日（月和年）：<input type="month" name="bdaymonth">
+    <input type="submit">
+</form>
+
+<form action="../php/demo-form.php" name="input-number">
+    <h2>Input 类型：number</h2>
+    <p>
+        number类型用于应该包含数值的输入域
+        还能够设定对所接受的数字的限定
+    </p>
+    数量（1到5之间）：<input type="number" name="quantity" min="1" max="5">
+    <input type="submit">
+</form>
+
+<form action="../php/demo-form.php" name="input-range">
+    <h2>Input 类型：range</h2>
+    <p>
+        range类型用于应该包含一定范围内数字值的输入域
+        还能够设定对所接受的数字的限定
+    </p>
+    数量（1到5之间）：<input type="number" name="quantity" min="1" max="5">
+    <input type="submit">
+</form>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>html5 Geolocation（地理定位）</title>
+    <!--[if lt IE 9]>
+    <script src="http://cdn.static.runoob.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+        #div1 {width:350px;height:70px;padding:10px;border:1px solid #aaaaaa;}
+    </style>
+</head>
+<body>
+<h1>html5 Geolocation（地理定位）</h1>
+<h2>1.定位用户的位置</h2>
+<p>
+    HTML5 Geolocation API用于获得用户的地理位置。
+    鉴于该特性可能侵犯用户的隐私，除非用户同意，否则用户位置信息是不可用的。
+</p>
+<h2>2.HTML5-使用地理定位</h2>
+<p>
+    使用getCurrentPosition()方法来获得用户的位置。
+    下面的例子可返回用户位置的经度和纬度：
+</p>
+<input type="button" onclick="getLocation();" value="Get Location"/>
+<script type="text/javascript">
+
+    function showLocation(position) {
+        var latitude = position.coords.latitude;
+        var longitude = position.coords.longitude;
+        alert("Latitude : " + latitude + " Longitude: " + longitude);
+    }
+
+    function errorHandler(err) {
+        console.log(err);
+        if(err.code == 1) {
+            alert("Error: Access is denied!");
+        }
+
+        else if( err.code == 2) {
+            alert("Error: Position is unavailable!");
+        }
+    }
+
+    function getLocation(){
+
+        if(navigator.geolocation){
+            // timeout at 60000 milliseconds (60 seconds)
+            var options = {timeout:60000};
+            navigator.geolocation.getCurrentPosition(showLocation, errorHandler, options);
+        }
+
+        else{
+            alert("Sorry, browser does not support geolocation!");
+        }
+    }
+
+</script>
+</body>
+</html>

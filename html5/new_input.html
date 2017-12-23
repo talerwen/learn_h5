@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5 新的表单元素</title>
+</head>
+<body>
+<h1>HTML5 新的表单元素</h1>
+<xmp>
+    HTML5<datalist>元素
+    <datalist>元素规定输入域的选项列表。
+    <datalist>属性规定form或input域应该拥有自动完成功能。当用户在自动完成域中开始输入时，浏览器应该在该域中显示填写的选项：
+    使用<input>元素的列表属性与<datalist>元素绑定
+</xmp>
+<form action="../php/demo-form.php" name="input-range">
+    <input list="browers" name="browser">
+    <datalist id="browers">
+        <option value="Internet Explorer"></option>
+        <option value="Firefox"></option>
+        <option value="Chrome"></option>
+        <option value="Opera"></option>
+        <option value="Safari"></option>
+    </datalist>
+    <input type="submit">
+</form>
+</body>
+</html>

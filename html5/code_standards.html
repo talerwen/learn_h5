@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5 代码规范</title>
+</head>
+<body>
+<h2>使用正确的文档类型</h2>
+文档类型声明位于HTML文档的第一行：
+<xmp><!DOCTYPE html></xmp>
+<h2>使用小写元素名</h2>
+<h2>关闭所有HTML元素</h2>
+<h2>关闭空的HTML元素</h2>
+<h2>使用小写属性名</h2>
+<h2>属性值使用双引号</h2>
+<h2>图片属性</h2>
+<xmp>
+    图片通常使用 alt 属性。 在图片不能显示时，它能替代图片显示。
+    <img src="html5.gif" alt="HTML5" style="width:128px;height:128px">
+    定义好图片的尺寸，在加载时可以预留指定空间，减少闪烁。
+    <img src="html5.gif" alt="HTML5" style="width:128px;height:128px">
+</xmp>
+<h2>空格和等号</h2>
+<xmp>
+    等号前后可以使用空格。
+    <link rel = "stylesheet" href = "styles.css">
+    但我们推荐少用空格:
+    <link rel="stylesheet" href="styles.css">
+</xmp>
+<h2>避免一行代码过长</h2>
+<xmp>
+    使用 HTML 编辑器，左右滚动代码是不方便的。
+    每行代码尽量少于 80 个字符。
+</xmp>
+<h2>空行和缩进</h2>
+不要无缘无故添加空行。
+为每个逻辑功能块添加空行，这样更易于阅读。
+缩进使用两个空格，不建议使用 TAB。
+比较短的代码间不要使用不必要的空行和缩进。
+不必要的空行和缩进:
+<h2>样式表</h2>
+<xmp>
+    样式表使用简洁的语法格式 ( type 属性不是必须的):
+    <link rel="stylesheet" href="styles.css">
+    短的规则可以写成一行:
+    p.into {font-family: Verdana; font-size: 16em;}
+    长的规则可以写成多行:
+    body {
+    background-color: lightgrey;
+    font-family: "Arial Black", Helvetica, sans-serif;
+    font-size: 16em;
+    color: black;
+    }
+    将左花括号与选择器放在同一行。
+    左花括号与选择器间添加一个空格。
+    使用两个空格来缩进。
+    冒号与属性值之间添加一个空格。
+    逗号和符号之后使用一个空格。
+    每个属性与值结尾都要使用分号。
+    只有属性值包含空格时才使用引号。
+    右花括号放在新的一行。
+    每行最多 80 个字符。
+</xmp>
+<h2>在 HTML 中载入 JavaScript</h2>
+<xmp>
+    使用简洁的语法来载入外部的脚本文件 ( type 属性不是必须的 ):
+    <script src="myscript.js" />
+</xmp>
+</body>
+</html>
